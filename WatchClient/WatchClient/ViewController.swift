@@ -26,6 +26,7 @@ class ViewController: UIViewController,CommunicationCoreAvailabilityProtocol {
     func didEstablishTheConnection() {
         dispatch_async(dispatch_get_main_queue()) {
             var appStoryboard = UIStoryboard(name: "WatchApp", bundle: NSBundle.mainBundle())
+            //Change the instantiateVC Identifier to "SimpleVC" to try the demo with a text label and a button
             self.activeController = appStoryboard.instantiateViewControllerWithIdentifier("ListVC") as UIViewController
             self.presentViewController(self.activeController, animated: true, completion: nil)
         }
