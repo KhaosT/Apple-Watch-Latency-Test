@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController,CommunicationCoreAvailabilityProtocol {
     
     var activeController: UIViewController!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var buttonTestButton: UIButton!
     @IBOutlet weak var listTestButton: UIButton!
 
@@ -27,6 +28,7 @@ class ViewController: UIViewController,CommunicationCoreAvailabilityProtocol {
     
     func didEstablishTheConnection() {
         dispatch_async(dispatch_get_main_queue()) {
+            self.statusLabel.text = "Connected"
             self.buttonTestButton.enabled = true
             self.listTestButton.enabled = true
         }
@@ -48,6 +50,7 @@ class ViewController: UIViewController,CommunicationCoreAvailabilityProtocol {
         dispatch_async(dispatch_get_main_queue()) {
             self.dismissViewControllerAnimated(true, completion: nil)
             self.activeController = nil
+            self.statusLabel.text = "Scanning Server..."
             self.buttonTestButton.enabled = false
             self.listTestButton.enabled = false
         }

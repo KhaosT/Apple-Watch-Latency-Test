@@ -59,6 +59,7 @@
                     <connections>
                         <outlet property="buttonTestButton" destination="ZXX-XJ-2ow" id="qCM-9U-fKJ"/>
                         <outlet property="listTestButton" destination="Fcl-GR-App" id="cWb-9d-og9"/>
+                        <outlet property="statusLabel" destination="Aw2-l3-OtH" id="QGQ-O0-61U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
