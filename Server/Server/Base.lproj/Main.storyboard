@@ -16,20 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-bf-0Tl">
-                                <rect key="frame" x="268" y="285" width="64" height="30"/>
-                                <state key="normal" title="Start Adv">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startAdvertising:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wZz-O2-iPm"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFi-s7-K9B">
+                                <rect key="frame" x="275" y="289" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="3zy-bf-0Tl" secondAttribute="centerY" id="KBh-vD-U28"/>
-                            <constraint firstAttribute="centerX" secondItem="3zy-bf-0Tl" secondAttribute="centerX" id="wIG-W9-fGU"/>
+                            <constraint firstAttribute="centerX" secondItem="eFi-s7-K9B" secondAttribute="centerX" id="AMr-c0-3xb"/>
+                            <constraint firstAttribute="centerY" secondItem="eFi-s7-K9B" secondAttribute="centerY" id="RPG-ex-2VP"/>
                         </constraints>
                     </view>
                 </viewController>

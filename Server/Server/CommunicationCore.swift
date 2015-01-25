@@ -223,6 +223,7 @@ class CommunicationCore: NSObject, CBPeripheralManagerDelegate {
     func peripheralManager(peripheral: CBPeripheralManager!, didAddService service: CBService!, error: NSError!) {
         if error == nil {
             self.readyToAdvertise = true
+            self.startAdvertising()
             NSLog("Peripheral Manager did add service")
         } else {
             self.readyToAdvertise = false

@@ -45,10 +45,6 @@ class ViewController: UIViewController, CommunicationCoreProtocol {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func startAdvertising(sender: AnyObject) {
-        self.communicationCore.startAdvertising()
-    }
 
 }
 

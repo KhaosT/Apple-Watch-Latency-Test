@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-VB-3bP">
-                                <rect key="frame" x="260" y="290" width="79" height="20.5"/>
+                                <rect key="frame" x="260" y="290" width="78.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -31,13 +31,24 @@
                                     <action selector="pressButton:" destination="0jD-c4-8rr" eventType="touchUpInside" id="F87-wq-uNR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-lT-x4u">
+                                <rect key="frame" x="16" y="20" width="40" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeVC:" destination="0jD-c4-8rr" eventType="touchUpInside" id="EAP-LD-5t3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Axj-VB-3bP" secondAttribute="centerX" id="BjT-Nj-gCv"/>
+                            <constraint firstItem="PO6-lT-x4u" firstAttribute="top" secondItem="K6X-1v-BA8" secondAttribute="bottom" id="Bqo-43-ZFf"/>
                             <constraint firstItem="poP-bv-nIg" firstAttribute="top" secondItem="Axj-VB-3bP" secondAttribute="bottom" constant="7.5" id="Nwz-MA-Jnd"/>
                             <constraint firstAttribute="centerY" secondItem="Axj-VB-3bP" secondAttribute="centerY" id="TLK-Ue-Ea5"/>
                             <constraint firstAttribute="centerX" secondItem="poP-bv-nIg" secondAttribute="centerX" id="XFO-3z-AlL"/>
+                            <constraint firstItem="PO6-lT-x4u" firstAttribute="leading" secondItem="qvu-4G-WHt" secondAttribute="leading" constant="16" id="xNn-P8-R8T"/>
                         </constraints>
                     </view>
                     <connections>
@@ -88,6 +99,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghj-6n-c2I">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem title="Close" id="gWu-Ge-Ef4">
+                                        <connections>
+                                            <action selector="closeVC:" destination="VEp-Dn-1Eg" id="GuT-ry-fSW"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" id="aVA-xN-fxx">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" id="diP-CJ-RC1">
                                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>

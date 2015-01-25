@@ -20,20 +20,46 @@
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning Server..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-l3-OtH">
-                                <rect key="frame" x="230.5" y="318" width="139" height="20.5"/>
+                                <rect key="frame" x="230" y="318" width="139" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXX-XJ-2ow">
+                                <rect key="frame" x="261" y="357" width="79" height="30"/>
+                                <state key="normal" title="Button Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8fV-d2-MVL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcl-GR-App">
+                                <rect key="frame" x="272" y="395" width="57" height="30"/>
+                                <state key="normal" title="List Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startListTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GsJ-l9-jmw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Fcl-GR-App" firstAttribute="top" secondItem="ZXX-XJ-2ow" secondAttribute="bottom" constant="8" id="38V-QK-Rkj"/>
+                            <constraint firstItem="Aw2-l3-OtH" firstAttribute="centerX" secondItem="ZXX-XJ-2ow" secondAttribute="centerX" constant="-1" id="b4A-dX-wi7"/>
                             <constraint firstItem="Aw2-l3-OtH" firstAttribute="top" secondItem="EYC-od-Cdh" secondAttribute="bottom" constant="8" id="e4s-ZM-DZF"/>
                             <constraint firstAttribute="centerX" secondItem="EYC-od-Cdh" secondAttribute="centerX" id="gfD-HR-TPF"/>
                             <constraint firstAttribute="centerY" secondItem="EYC-od-Cdh" secondAttribute="centerY" id="qkv-PF-dD7"/>
                             <constraint firstAttribute="centerX" secondItem="Aw2-l3-OtH" secondAttribute="centerX" id="sQh-C6-wSE"/>
+                            <constraint firstItem="ZXX-XJ-2ow" firstAttribute="centerX" secondItem="Fcl-GR-App" secondAttribute="centerX" id="vkG-Wx-UFI"/>
+                            <constraint firstItem="ZXX-XJ-2ow" firstAttribute="top" secondItem="Aw2-l3-OtH" secondAttribute="bottom" constant="18.5" id="xy5-B1-xYv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonTestButton" destination="ZXX-XJ-2ow" id="qCM-9U-fKJ"/>
+                        <outlet property="listTestButton" destination="Fcl-GR-App" id="cWb-9d-og9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

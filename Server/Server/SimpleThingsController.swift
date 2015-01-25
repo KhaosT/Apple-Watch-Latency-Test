@@ -35,13 +35,15 @@ class SimpleThingsController: NSObject {
     func updateCells(value: Float?) {
         NSLog("updateCells")
         if let value = value {
-            var trans = Transaction(tp: .List)
-            var items = [String]()
-            for index in 1...Int(value) {
-                items.append("Item \(index)")
+            if value > 0 {
+                var trans = Transaction(tp: .List)
+                var items = [String]()
+                for index in 1...Int(value) {
+                    items.append("Item \(index)")
+                }
+                trans.listItems = items
+                CommunicationCore.sharedInstance.emitTransaction(trans)
             }
-            trans.listItems = items
-            CommunicationCore.sharedInstance.emitTransaction(trans)
         }
     }
 }

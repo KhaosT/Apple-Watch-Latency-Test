@@ -78,6 +78,11 @@ class ComplexThingsViewController: UIViewController, UITableViewDelegate, UITabl
             }
         }
     }
+    
+    @IBAction func closeVC(sender: AnyObject) {
+        CommunicationCore.sharedInstance.activeVCDelegate = nil
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
